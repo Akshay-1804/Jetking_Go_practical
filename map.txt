@@ -1,0 +1,29 @@
+package main
+
+import "fmt"
+
+func main() {
+	students := map[string]interface{}{
+		"name":   "Akshay Deore",
+		"age":    "18",
+		"RollNo": "15",
+	}
+	//printing mapping elements
+	fmt.Println("MAP is : ", students)
+	fmt.Println()
+
+	//Accessing elements by key
+	fmt.Println("The name of student is : \n", students["name"])
+	fmt.Println()
+
+	//Adding new key-value
+	students["Division"] = "A"
+	fmt.Println("The Division of student is : Division  \n", students["Division"])
+	fmt.Println()
+
+	//deleting a key-value
+	delete(students, "age")
+
+	fmt.Println("The Updated map is: ", students)
+
+}
